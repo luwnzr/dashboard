@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Usuários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background-color: #5900ff;
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header .admin-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .header .admin-info p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .header button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sidebar th, .sidebar td {
+            padding: 16px; /* Espaçamento maior */
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .sidebar th {
+            background-color: #5900ff;
+            color: white;
+        }
+        .sidebar td.applications {
+            color: inherit; /* Texto em branco (cor padrão) para "Aplicações" */
+        }
+        .sidebar td.users {
+            color: #5900ff; /* Texto em azul para "Usuários" */
+        }
+        .main-content {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .main-content h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #5900ff;
+        }
+        .main-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .main-content th, .main-content td {
+            padding: 16px; /* Espaçamento maior */
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .main-content th {
+            background-color: #5900ff;
+            color: white;
+        }
+        button {
+            padding: 6px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.btn-edit {
+            background-color: #28a745;
+            color: white;
+        }
+        button.btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Gestão de Usuários</h1>
+        <div class="admin-info">
+            <p>Particular Admin</p>
+            <button>Sair</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Tabela à esquerda (Aplicações e Usuários) -->
+        <div class="sidebar">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Menu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="applications">Aplicações</td>
+                    </tr>
+                    <tr>
+                        <td class="users">Usuários</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela principal à direita -->
+        <div class="main-content">
+            <h2>Usuários do Sistema</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Gmail</th>
+                        <th>Perfil</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luane Gabrielly</td>
+                        <td>luane.gabrielly@gmail.com</td>
+                        <td>Administrador</td>
+                        <td>
+                            <button class="btn-edit">Editar</button>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Batista</td>
+                        <td>batista@gmail.com</td>
+                        <td>Usuário Comum</td>
+                        <td>
+                            <button class="btn-edit">Editar</button>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Samambaia</td>
+                        <td>sambas@gmail.com</td>
+                        <td>Moderador</td>
+                        <td>
+                            <button class="btn-edit">Editar</button>
+                            <button class="btn-delete">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
